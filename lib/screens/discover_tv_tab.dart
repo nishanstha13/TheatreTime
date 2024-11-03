@@ -238,10 +238,10 @@ class _DiscoverTVTabState extends State<DiscoverTVTab> {
               padding: const EdgeInsets.all(8.0),
               child: ElevatedButton(
                   style: ButtonStyle(
-                      minimumSize: MaterialStateProperty.all(
+                      minimumSize: WidgetStateProperty.all(
                           const Size(double.infinity, 50)),
                       backgroundColor:
-                          MaterialStateProperty.all(const Color(0xFFECB718))),
+                          WidgetStateProperty.all(const Color(0xFFECB718))),
                   onPressed: () {
                     joinGenreStrings();
                     joinProviderStrings();
@@ -254,10 +254,10 @@ class _DiscoverTVTabState extends State<DiscoverTVTab> {
                       );
                     }));
                   },
-                  child: Row(
+                  child: const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
-                    children: const [
+                    children: [
                       Padding(
                         padding: EdgeInsets.only(right: 8.0),
                         child: Text('Discover'),

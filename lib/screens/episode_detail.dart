@@ -383,8 +383,8 @@ class EpisodeDetailPageState extends State<EpisodeDetailPage>
                                           child: SingleChildScrollView(
                                             child: Column(
                                               children: <Widget>[
-                                                Row(
-                                                  children: const <Widget>[
+                                                const Row(
+                                                  children: <Widget>[
                                                     Padding(
                                                       padding: EdgeInsets.only(
                                                           left: 8.0),
@@ -457,12 +457,12 @@ class EpisodeDetailPageState extends State<EpisodeDetailPage>
                                                   child: TextButton(
                                                     style: ButtonStyle(
                                                         maximumSize:
-                                                            MaterialStateProperty
+                                                            WidgetStateProperty
                                                                 .all(Size(
                                                                     buttonWidth!,
                                                                     50)),
                                                         backgroundColor:
-                                                            MaterialStateProperty
+                                                            WidgetStateProperty
                                                                 .all(const Color(
                                                                     0xFFECB718))),
                                                     onPressed: () async {

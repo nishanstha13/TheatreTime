@@ -362,8 +362,8 @@ class TVDetailPageState extends State<TVDetailPage>
                                                   api: Endpoints.tvDetailsUrl(
                                                       widget.tvSeries.id!),
                                                 ),
-                                                Row(
-                                                  children: const <Widget>[
+                                                const Row(
+                                                  children: <Widget>[
                                                     Padding(
                                                       padding: EdgeInsets.only(
                                                           left: 8.0),

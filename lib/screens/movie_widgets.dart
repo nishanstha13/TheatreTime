@@ -251,9 +251,9 @@ class DiscoverMoviesState extends State<DiscoverMovies>
           TextButton(
               style: ButtonStyle(
                   backgroundColor:
-                      MaterialStateProperty.all(const Color(0x0DF57C00)),
-                  maximumSize: MaterialStateProperty.all(const Size(200, 60)),
-                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      WidgetStateProperty.all(const Color(0x0DF57C00)),
+                  maximumSize: WidgetStateProperty.all(const Size(200, 60)),
+                  shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(5.0),
                           side: const BorderSide(color: Color(0xFFECB718))))),
@@ -407,10 +407,10 @@ class ScrollingMoviesState extends State<ScrollingMovies>
                   },
                   style: ButtonStyle(
                       backgroundColor:
-                          MaterialStateProperty.all(const Color(0x26F57C00)),
+                          WidgetStateProperty.all(const Color(0x26F57C00)),
                       maximumSize:
-                          MaterialStateProperty.all(const Size(200, 60)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          WidgetStateProperty.all(const Size(200, 60)),
+                      shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20.0),
                               side:
@@ -574,9 +574,9 @@ class ScrollingMoviesState extends State<ScrollingMovies>
           TextButton(
               style: ButtonStyle(
                   backgroundColor:
-                      MaterialStateProperty.all(const Color(0x0DF57C00)),
-                  maximumSize: MaterialStateProperty.all(const Size(200, 60)),
-                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      WidgetStateProperty.all(const Color(0x0DF57C00)),
+                  maximumSize: WidgetStateProperty.all(const Size(200, 60)),
+                  shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(5.0),
                           side: const BorderSide(color: Color(0xFFECB718))))),
@@ -630,10 +630,10 @@ class ScrollingArtistsState extends State<ScrollingArtists> {
     return Column(
       children: <Widget>[
         credits == null
-            ? Padding(
-                padding: const EdgeInsets.all(8.0),
+            ? const Padding(
+                padding: EdgeInsets.all(8.0),
                 child: Row(
-                  children: const <Widget>[
+                  children: <Widget>[
                     Text(
                       'Cast',
                       style: kTextHeaderStyle,
@@ -649,9 +649,9 @@ class ScrollingArtistsState extends State<ScrollingArtists> {
                             'There are no casts available for this movie',
                             textAlign: TextAlign.center)),
                   )
-                : Row(
+                : const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const <Widget>[
+                    children: <Widget>[
                       Padding(
                         padding: EdgeInsets.all(8.0),
                         child: Text(
@@ -979,12 +979,12 @@ class BelongsToCollectionWidgetState extends State<BelongsToCollectionWidget> {
                                     child: TextButton(
                                       style: ButtonStyle(
                                           backgroundColor:
-                                              MaterialStateProperty.all(
+                                              WidgetStateProperty.all(
                                                   const Color(0x26F57C00)),
                                           maximumSize:
-                                              MaterialStateProperty.all(
+                                              WidgetStateProperty.all(
                                                   const Size(200, 40)),
-                                          shape: MaterialStateProperty.all<
+                                          shape: WidgetStateProperty.all<
                                                   RoundedRectangleBorder>(
                                               RoundedRectangleBorder(
                                                   borderRadius:
@@ -1100,10 +1100,10 @@ class CollectionOverviewWidgetState extends State<CollectionOverviewWidget> {
               TextButton(
                   style: ButtonStyle(
                       backgroundColor:
-                          MaterialStateProperty.all(const Color(0x0DF57C00)),
+                          WidgetStateProperty.all(const Color(0x0DF57C00)),
                       maximumSize:
-                          MaterialStateProperty.all(const Size(200, 60)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          WidgetStateProperty.all(const Size(200, 60)),
+                      shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5.0),
                               side:
@@ -1371,10 +1371,10 @@ class PartsListState extends State<PartsList> {
               TextButton(
                   style: ButtonStyle(
                       backgroundColor:
-                          MaterialStateProperty.all(const Color(0x0DF57C00)),
+                          WidgetStateProperty.all(const Color(0x0DF57C00)),
                       maximumSize:
-                          MaterialStateProperty.all(const Size(200, 60)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          WidgetStateProperty.all(const Size(200, 60)),
+                      shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5.0),
                               side:
@@ -1981,9 +1981,9 @@ class WatchNowButtonState extends State<WatchNowButton> {
     return Container(
       child: TextButton(
         style: ButtonStyle(
-            maximumSize: MaterialStateProperty.all(Size(buttonWidth!, 50)),
+            maximumSize: WidgetStateProperty.all(Size(buttonWidth!, 50)),
             backgroundColor:
-                MaterialStateProperty.all(const Color(0xFFECB718))),
+                WidgetStateProperty.all(const Color(0xFFECB718))),
         onPressed: () async {
           mixpanel.track('Most viewed movie pages', properties: {
             'Movie name': widget.movieName,
@@ -2151,7 +2151,7 @@ class MovieInfoTableState extends State<MovieInfoTable> {
               scrollDirection: Axis.horizontal,
               child: movieDetails == null
                   ? detailInfoTableShimmer(isDark)
-                  : DataTable(dataRowHeight: 40, columns: [
+                  : DataTable(dataRowMinHeight: 40, columns: [
                       const DataColumn(
                           label: Text(
                         'Original Title',
@@ -2528,10 +2528,10 @@ class CastTabState extends State<CastTab>
               TextButton(
                   style: ButtonStyle(
                       backgroundColor:
-                          MaterialStateProperty.all(const Color(0x0DF57C00)),
+                          WidgetStateProperty.all(const Color(0x0DF57C00)),
                       maximumSize:
-                          MaterialStateProperty.all(const Size(200, 60)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          WidgetStateProperty.all(const Size(200, 60)),
+                      shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5.0),
                               side:
@@ -2762,10 +2762,10 @@ class CrewTabState extends State<CrewTab>
               TextButton(
                   style: ButtonStyle(
                       backgroundColor:
-                          MaterialStateProperty.all(const Color(0x0DF57C00)),
+                          WidgetStateProperty.all(const Color(0x0DF57C00)),
                       maximumSize:
-                          MaterialStateProperty.all(const Size(200, 60)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          WidgetStateProperty.all(const Size(200, 60)),
+                      shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5.0),
                               side:
@@ -3071,10 +3071,10 @@ class MovieRecommendationsTabState extends State<MovieRecommendationsTab>
               TextButton(
                   style: ButtonStyle(
                       backgroundColor:
-                          MaterialStateProperty.all(const Color(0x0DF57C00)),
+                          WidgetStateProperty.all(const Color(0x0DF57C00)),
                       maximumSize:
-                          MaterialStateProperty.all(const Size(200, 60)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          WidgetStateProperty.all(const Size(200, 60)),
+                      shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5.0),
                               side:
@@ -3380,10 +3380,10 @@ class SimilarMoviesTabState extends State<SimilarMoviesTab>
               TextButton(
                   style: ButtonStyle(
                       backgroundColor:
-                          MaterialStateProperty.all(const Color(0x0DF57C00)),
+                          WidgetStateProperty.all(const Color(0x0DF57C00)),
                       maximumSize:
-                          MaterialStateProperty.all(const Size(200, 60)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          WidgetStateProperty.all(const Size(200, 60)),
+                      shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5.0),
                               side:
@@ -3703,9 +3703,9 @@ class ParticularGenreMoviesState extends State<ParticularGenreMovies> {
           TextButton(
               style: ButtonStyle(
                   backgroundColor:
-                      MaterialStateProperty.all(const Color(0x0DF57C00)),
-                  maximumSize: MaterialStateProperty.all(const Size(200, 60)),
-                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      WidgetStateProperty.all(const Color(0x0DF57C00)),
+                  maximumSize: WidgetStateProperty.all(const Size(200, 60)),
+                  shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(5.0),
                           side: const BorderSide(color: Color(0xFFECB718))))),
@@ -4025,9 +4025,9 @@ class ParticularStreamingServiceMoviesState
           TextButton(
               style: ButtonStyle(
                   backgroundColor:
-                      MaterialStateProperty.all(const Color(0x0DF57C00)),
-                  maximumSize: MaterialStateProperty.all(const Size(200, 60)),
-                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      WidgetStateProperty.all(const Color(0x0DF57C00)),
+                  maximumSize: WidgetStateProperty.all(const Size(200, 60)),
+                  shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(5.0),
                           side: const BorderSide(color: Color(0xFFECB718))))),
@@ -4139,9 +4139,9 @@ class GenreListGridState extends State<GenreListGrid>
     final isDark = Provider.of<DarkthemeProvider>(context).darktheme;
     return Column(
       children: [
-        Row(
+        const Row(
           mainAxisAlignment: MainAxisAlignment.start,
-          children: const <Widget>[
+          children: <Widget>[
             Padding(
               padding: EdgeInsets.all(8.0),
               child: Text(
@@ -4221,10 +4221,10 @@ class GenreListGridState extends State<GenreListGrid>
               TextButton(
                   style: ButtonStyle(
                       backgroundColor:
-                          MaterialStateProperty.all(const Color(0x0DF57C00)),
+                          WidgetStateProperty.all(const Color(0x0DF57C00)),
                       maximumSize:
-                          MaterialStateProperty.all(const Size(200, 60)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          WidgetStateProperty.all(const Size(200, 60)),
+                      shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5.0),
                               side:
@@ -4266,9 +4266,9 @@ class TopButtonState extends State<TopButton> {
       padding: const EdgeInsets.all(10.0),
       child: TextButton(
         style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(const Color(0x26F57C00)),
-            maximumSize: MaterialStateProperty.all(const Size(200, 60)),
-            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+            backgroundColor: WidgetStateProperty.all(const Color(0x26F57C00)),
+            maximumSize: WidgetStateProperty.all(const Size(200, 60)),
+            shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                 RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(5.0),
                     side: const BorderSide(color: Color(0xFFECB718))))),
@@ -4315,9 +4315,9 @@ class _WatchProvidersButtonState extends State<WatchProvidersButton> {
       padding: const EdgeInsets.all(10.0),
       child: TextButton(
         style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(const Color(0x26F57C00)),
-            maximumSize: MaterialStateProperty.all(const Size(200, 60)),
-            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+            backgroundColor: WidgetStateProperty.all(const Color(0x26F57C00)),
+            maximumSize: WidgetStateProperty.all(const Size(200, 60)),
+            shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                 RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(5.0),
                     side: const BorderSide(color: Color(0xFFECB718))))),
@@ -4532,10 +4532,10 @@ class _WatchProvidersDetailsState extends State<WatchProvidersDetails>
               TextButton(
                   style: ButtonStyle(
                       backgroundColor:
-                          MaterialStateProperty.all(const Color(0x0DF57C00)),
+                          WidgetStateProperty.all(const Color(0x0DF57C00)),
                       maximumSize:
-                          MaterialStateProperty.all(const Size(200, 60)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          WidgetStateProperty.all(const Size(200, 60)),
+                      shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5.0),
                               side:

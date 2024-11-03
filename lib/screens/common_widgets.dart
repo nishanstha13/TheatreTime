@@ -502,7 +502,7 @@ Widget detailInfoTableItemShimmer(isDark) => Shimmer.fromColors(
       ),
     );
 
-Widget detailInfoTableShimmer(isDark) => DataTable(dataRowHeight: 40, columns: [
+Widget detailInfoTableShimmer(isDark) => DataTable(dataRowMinHeight: 40, columns: [
       // const DataColumn(
       //     label: Text(
       //   'Original Title',
@@ -563,7 +563,7 @@ Widget detailInfoTableShimmer(isDark) => DataTable(dataRowHeight: 40, columns: [
     ]);
 
 Widget personDetailInfoTableShimmer(isDark) =>
-    DataTable(dataRowHeight: 40, columns: [
+    DataTable(dataRowMinHeight: 40, columns: [
       DataColumn(label: detailInfoTableItemShimmer(isDark)),
       DataColumn(label: detailInfoTableItemShimmer(isDark)),
     ], rows: [

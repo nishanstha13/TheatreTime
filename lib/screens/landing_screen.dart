@@ -119,7 +119,7 @@ class _LandingScreenState extends State<LandingScreen> {
                       child: ElevatedButton(
                           style: ButtonStyle(
                               backgroundColor:
-                                  MaterialStateProperty.all(Colors.white)),
+                                  WidgetStateProperty.all(Colors.white)),
                           onPressed: () async {
                             updateFirstRunData();
                             Navigator.pushReplacement(context,

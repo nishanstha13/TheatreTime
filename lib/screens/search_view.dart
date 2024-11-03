@@ -44,7 +44,7 @@ class Search extends SearchDelegate<String> {
         disabledBorder: InputBorder.none,
       ),
       textTheme: TextTheme(
-        headline6: TextStyle(
+        titleLarge: TextStyle(
             color: isDark ? Colors.white : Colors.black, fontFamily: 'Poppins'),
       ),
       textSelectionTheme: TextSelectionThemeData(
@@ -805,12 +805,12 @@ class Search extends SearchDelegate<String> {
   }
 
   Widget buildSuggestionsSuccess(List<TV> moviesList) {
-    return DefaultTabController(
+    return const DefaultTabController(
       length: 3,
       initialIndex: 0,
       child: Scaffold(
         body: Column(
-          children: const [
+          children: [
             TabBar(
               tabs: [
                 Tab(

@@ -170,13 +170,13 @@ class _HeroPhotoViewState extends State<HeroPhotoView> {
                         widget.heroId, '${widget.currentIndex + 1}', isDark);
                   },
                   style: ButtonStyle(
-                      minimumSize: MaterialStateProperty.all(
+                      minimumSize: WidgetStateProperty.all(
                           const Size(double.infinity, 50)),
                       backgroundColor:
-                          MaterialStateProperty.all(const Color(0xFFECB718))),
-                  child: Row(
+                          WidgetStateProperty.all(const Color(0xFFECB718))),
+                  child: const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
+                    children: [
                       Padding(
                         padding: EdgeInsets.only(right: 8.0),
                         child: Icon(Icons.save),

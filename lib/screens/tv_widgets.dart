@@ -248,9 +248,9 @@ class DiscoverTVState extends State<DiscoverTV>
           TextButton(
               style: ButtonStyle(
                   backgroundColor:
-                      MaterialStateProperty.all(const Color(0x0DF57C00)),
-                  maximumSize: MaterialStateProperty.all(const Size(200, 60)),
-                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      WidgetStateProperty.all(const Color(0x0DF57C00)),
+                  maximumSize: WidgetStateProperty.all(const Size(200, 60)),
+                  shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(5.0),
                           side: const BorderSide(
@@ -402,10 +402,10 @@ class ScrollingTVState extends State<ScrollingTV>
                   },
                   style: ButtonStyle(
                       backgroundColor:
-                          MaterialStateProperty.all(const Color(0x26F57C00)),
+                          WidgetStateProperty.all(const Color(0x26F57C00)),
                       maximumSize:
-                          MaterialStateProperty.all(const Size(200, 60)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          WidgetStateProperty.all(const Size(200, 60)),
+                      shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20.0),
                               side: BorderSide(
@@ -571,9 +571,9 @@ class ScrollingTVState extends State<ScrollingTV>
           TextButton(
               style: ButtonStyle(
                   backgroundColor:
-                      MaterialStateProperty.all(const Color(0x0DF57C00)),
-                  maximumSize: MaterialStateProperty.all(const Size(200, 60)),
-                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      WidgetStateProperty.all(const Color(0x0DF57C00)),
+                  maximumSize: WidgetStateProperty.all(const Size(200, 60)),
+                  shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(5.0),
                           side: const BorderSide(color: Color(0xFFECB718))))),
@@ -627,9 +627,9 @@ class ScrollingTVArtistsState extends State<ScrollingTVArtists>
     final isDark = Provider.of<DarkthemeProvider>(context).darktheme;
     return Column(
       children: <Widget>[
-        Row(
+        const Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: const [
+          children: [
             Padding(
               padding: EdgeInsets.all(8.0),
               child: Text(
@@ -791,10 +791,10 @@ class ScrollingTVEpisodeCastsState extends State<ScrollingTVEpisodeCasts>
     return Column(
       children: <Widget>[
         credits == null
-            ? Padding(
-                padding: const EdgeInsets.all(8.0),
+            ? const Padding(
+                padding: EdgeInsets.all(8.0),
                 child: Row(
-                  children: const <Widget>[
+                  children: <Widget>[
                     Text(
                       'Cast',
                       style: kTextHeaderStyle,
@@ -810,9 +810,9 @@ class ScrollingTVEpisodeCastsState extends State<ScrollingTVEpisodeCasts>
                             'There is no cast list available for this episode',
                             textAlign: TextAlign.center)),
                   )
-                : Row(
+                : const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const <Widget>[
+                    children: <Widget>[
                       Padding(
                         padding: EdgeInsets.all(8.0),
                         child: Text(
@@ -967,10 +967,10 @@ class ScrollingTVEpisodeGuestStarsState
     return Column(
       children: <Widget>[
         credits == null
-            ? Padding(
-                padding: const EdgeInsets.all(8.0),
+            ? const Padding(
+                padding: EdgeInsets.all(8.0),
                 child: Row(
-                  children: const <Widget>[
+                  children: <Widget>[
                     Text(
                       'Guest stars',
                       style: kTextHeaderStyle,
@@ -986,9 +986,9 @@ class ScrollingTVEpisodeGuestStarsState
                             'There is no guest star list available for this episode',
                             textAlign: TextAlign.center)),
                   )
-                : Row(
+                : const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const <Widget>[
+                    children: <Widget>[
                       Padding(
                         padding: EdgeInsets.all(8.0),
                         child: Text(
@@ -1149,10 +1149,10 @@ class ScrollingTVEpisodeCrewState extends State<ScrollingTVEpisodeCrew>
     return Column(
       children: <Widget>[
         credits == null
-            ? Padding(
-                padding: const EdgeInsets.all(8.0),
+            ? const Padding(
+                padding: EdgeInsets.all(8.0),
                 child: Row(
-                  children: const <Widget>[
+                  children: <Widget>[
                     Text(
                       'Crew',
                       style: kTextHeaderStyle,
@@ -1168,9 +1168,9 @@ class ScrollingTVEpisodeCrewState extends State<ScrollingTVEpisodeCrew>
                             'There is no crew list available for this episode',
                             textAlign: TextAlign.center)),
                   )
-                : Row(
+                : const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const <Widget>[
+                    children: <Widget>[
                       Padding(
                         padding: EdgeInsets.all(8.0),
                         child: Text(
@@ -1328,10 +1328,10 @@ class ScrollingTVCreatorsState extends State<ScrollingTVCreators>
     final isDark = Provider.of<DarkthemeProvider>(context).darktheme;
     return Column(
       children: <Widget>[
-        Padding(
-          padding: const EdgeInsets.all(8.0),
+        const Padding(
+          padding: EdgeInsets.all(8.0),
           child: Row(
-            children: const <Widget>[
+            children: <Widget>[
               Text(
                 'Created by',
                 style: kTextHeaderStyle,
@@ -2482,10 +2482,10 @@ class TVCastTabState extends State<TVCastTab>
               TextButton(
                   style: ButtonStyle(
                       backgroundColor:
-                          MaterialStateProperty.all(const Color(0x0DF57C00)),
+                          WidgetStateProperty.all(const Color(0x0DF57C00)),
                       maximumSize:
-                          MaterialStateProperty.all(const Size(200, 60)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          WidgetStateProperty.all(const Size(200, 60)),
+                      shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5.0),
                               side:
@@ -2740,10 +2740,10 @@ class TVSeasonsTabState extends State<TVSeasonsTab>
               TextButton(
                   style: ButtonStyle(
                       backgroundColor:
-                          MaterialStateProperty.all(const Color(0x0DF57C00)),
+                          WidgetStateProperty.all(const Color(0x0DF57C00)),
                       maximumSize:
-                          MaterialStateProperty.all(const Size(200, 60)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          WidgetStateProperty.all(const Size(200, 60)),
+                      shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5.0),
                               side:
@@ -2976,10 +2976,10 @@ class TVCrewTabState extends State<TVCrewTab>
               TextButton(
                   style: ButtonStyle(
                       backgroundColor:
-                          MaterialStateProperty.all(const Color(0x0DF57C00)),
+                          WidgetStateProperty.all(const Color(0x0DF57C00)),
                       maximumSize:
-                          MaterialStateProperty.all(const Size(200, 60)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          WidgetStateProperty.all(const Size(200, 60)),
+                      shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5.0),
                               side:
@@ -3286,10 +3286,10 @@ class TVRecommendationsTabState extends State<TVRecommendationsTab>
               TextButton(
                   style: ButtonStyle(
                       backgroundColor:
-                          MaterialStateProperty.all(const Color(0x0DF57C00)),
+                          WidgetStateProperty.all(const Color(0x0DF57C00)),
                       maximumSize:
-                          MaterialStateProperty.all(const Size(200, 60)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          WidgetStateProperty.all(const Size(200, 60)),
+                      shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5.0),
                               side:
@@ -3594,10 +3594,10 @@ class SimilarTVTabState extends State<SimilarTVTab>
               TextButton(
                   style: ButtonStyle(
                       backgroundColor:
-                          MaterialStateProperty.all(const Color(0x0DF57C00)),
+                          WidgetStateProperty.all(const Color(0x0DF57C00)),
                       maximumSize:
-                          MaterialStateProperty.all(const Size(200, 60)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          WidgetStateProperty.all(const Size(200, 60)),
+                      shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5.0),
                               side:
@@ -3996,10 +3996,10 @@ class ParticularGenreTVState extends State<ParticularGenreTV> {
               TextButton(
                   style: ButtonStyle(
                       backgroundColor:
-                          MaterialStateProperty.all(const Color(0x0DF57C00)),
+                          WidgetStateProperty.all(const Color(0x0DF57C00)),
                       maximumSize:
-                          MaterialStateProperty.all(const Size(200, 60)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          WidgetStateProperty.all(const Size(200, 60)),
+                      shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5.0),
                               side:
@@ -4055,7 +4055,7 @@ class TVInfoTableState extends State<TVInfoTable> {
               scrollDirection: Axis.horizontal,
               child: tvDetails == null
                   ? detailInfoTableShimmer(isDark)
-                  : DataTable(dataRowHeight: 40, columns: [
+                  : DataTable(dataRowMinHeight: 40, columns: [
                       const DataColumn(
                           label: Text(
                         'Original Title',
@@ -4855,10 +4855,10 @@ class EpisodeListWidgetState extends State<EpisodeListWidget>
               TextButton(
                   style: ButtonStyle(
                       backgroundColor:
-                          MaterialStateProperty.all(const Color(0x0DF57C00)),
+                          WidgetStateProperty.all(const Color(0x0DF57C00)),
                       maximumSize:
-                          MaterialStateProperty.all(const Size(200, 60)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          WidgetStateProperty.all(const Size(200, 60)),
+                      shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5.0),
                               side:
@@ -5094,10 +5094,10 @@ class _TVWatchProvidersDetailsState extends State<TVWatchProvidersDetails>
               TextButton(
                   style: ButtonStyle(
                       backgroundColor:
-                          MaterialStateProperty.all(const Color(0x0DF57C00)),
+                          WidgetStateProperty.all(const Color(0x0DF57C00)),
                       maximumSize:
-                          MaterialStateProperty.all(const Size(200, 60)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          WidgetStateProperty.all(const Size(200, 60)),
+                      shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5.0),
                               side:
@@ -5159,9 +5159,9 @@ class TVGenreListGridState extends State<TVGenreListGrid>
     final isDark = Provider.of<DarkthemeProvider>(context).darktheme;
     return Column(
       children: [
-        Row(
+        const Row(
           mainAxisAlignment: MainAxisAlignment.start,
-          children: const <Widget>[
+          children: <Widget>[
             Padding(
               padding: EdgeInsets.all(8.0),
               child: Text(
@@ -5242,10 +5242,10 @@ class TVGenreListGridState extends State<TVGenreListGrid>
               TextButton(
                   style: ButtonStyle(
                       backgroundColor:
-                          MaterialStateProperty.all(const Color(0x0DF57C00)),
+                          WidgetStateProperty.all(const Color(0x0DF57C00)),
                       maximumSize:
-                          MaterialStateProperty.all(const Size(200, 60)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          WidgetStateProperty.all(const Size(200, 60)),
+                      shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5.0),
                               side:
@@ -5711,10 +5711,10 @@ class ParticularStreamingServiceTVShowsState
               TextButton(
                   style: ButtonStyle(
                       backgroundColor:
-                          MaterialStateProperty.all(const Color(0x0DF57C00)),
+                          WidgetStateProperty.all(const Color(0x0DF57C00)),
                       maximumSize:
-                          MaterialStateProperty.all(const Size(200, 60)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          WidgetStateProperty.all(const Size(200, 60)),
+                      shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5.0),
                               side:
@@ -5955,10 +5955,10 @@ class TVEpisodeCastTabState extends State<TVEpisodeCastTab>
               TextButton(
                   style: ButtonStyle(
                       backgroundColor:
-                          MaterialStateProperty.all(const Color(0x0DF57C00)),
+                          WidgetStateProperty.all(const Color(0x0DF57C00)),
                       maximumSize:
-                          MaterialStateProperty.all(const Size(200, 60)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          WidgetStateProperty.all(const Size(200, 60)),
+                      shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5.0),
                               side:
@@ -6207,10 +6207,10 @@ class TVEpisodeGuestStarsTabState extends State<TVEpisodeGuestStarsTab>
               TextButton(
                   style: ButtonStyle(
                       backgroundColor:
-                          MaterialStateProperty.all(const Color(0x0DF57C00)),
+                          WidgetStateProperty.all(const Color(0x0DF57C00)),
                       maximumSize:
-                          MaterialStateProperty.all(const Size(200, 60)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          WidgetStateProperty.all(const Size(200, 60)),
+                      shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5.0),
                               side:

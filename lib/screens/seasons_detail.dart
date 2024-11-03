@@ -282,8 +282,8 @@ class SeasonsDetailState extends State<SeasonsDetail>
                                                 : const Color(0xFFFFFFFF),
                                             child: Column(
                                               children: <Widget>[
-                                                Row(
-                                                  children: const <Widget>[
+                                                const Row(
+                                                  children: <Widget>[
                                                     Padding(
                                                       padding: EdgeInsets.only(
                                                           left: 8.0),

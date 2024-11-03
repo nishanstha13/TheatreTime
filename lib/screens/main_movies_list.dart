@@ -328,9 +328,9 @@ class MainMoviesListState extends State<MainMoviesList> {
           TextButton(
               style: ButtonStyle(
                   backgroundColor:
-                      MaterialStateProperty.all(const Color(0x0DF57C00)),
-                  maximumSize: MaterialStateProperty.all(const Size(200, 60)),
-                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      WidgetStateProperty.all(const Color(0x0DF57C00)),
+                  maximumSize: WidgetStateProperty.all(const Size(200, 60)),
+                  shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(5.0),
                           side: const BorderSide(color: Color(0xFFECB718))))),

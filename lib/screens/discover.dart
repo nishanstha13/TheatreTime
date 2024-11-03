@@ -61,7 +61,7 @@ class _DiscoverPageState extends State<DiscoverPage>
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Padding(
-                        padding: EdgeInsets.only(right: 8.0),
+                        padding: const EdgeInsets.only(right: 8.0),
                         child: Icon(
                           Icons.live_tv_rounded,
                           color: isDark

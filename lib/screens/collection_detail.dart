@@ -180,8 +180,8 @@ class CollectionDetailsWidgetState extends State<CollectionDetailsWidget>
                                       physics: const BouncingScrollPhysics(),
                                       child: Column(
                                         children: <Widget>[
-                                          Row(
-                                            children: const <Widget>[
+                                          const Row(
+                                            children: <Widget>[
                                               Padding(
                                                 padding:
                                                     EdgeInsets.only(left: 8.0),

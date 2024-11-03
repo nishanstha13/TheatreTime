@@ -1,4 +1,3 @@
-import 'package:TheatreTime/provider/news_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
@@ -218,6 +217,7 @@ class _NewsViewState extends State<NewsView>
                                     width: 100,
                                     child: Image.network(attributes['src']))),
                             Expanded(
+                              flex: 2,
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -226,7 +226,6 @@ class _NewsViewState extends State<NewsView>
                                   Text(articleWebsite![index]['title']),
                                 ],
                               ),
-                              flex: 2,
                             )
                           ],
                         ),
